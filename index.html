@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RiRithShop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1 class="logo">RiRithShop</h1>
+
+      <nav class="nav-tags">
+        <a href="#iphone">iPhone</a>
+        <a href="#samsung">Samsung</a>
+        <a href="#tablet">Tablet</a>
+      </nav>
+    </header>
+
+    <!-- HERO SLIDER -->
+    <section class="hero">
+      <div class="slider">
+        <div class="slides" id="slides">
+          <img src="./imgs/iPhone-17-Colors.jpg" />
+          <img src="./imgs/maxresdefault.jpg" />
+          <img src="./imgs/hero__bsveixlwbms2_xlarge.jpg" />
+        </div>
+
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+
+      <div class="hero-text">
+        <h2>Shop by Category</h2>
+        <p>Choose your favorite brand</p>
+      </div>
+    </section>
+    <!-- SEARCH + FILTER -->
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search product..." />
+
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="iphone">iPhone</option>
+        <option value="samsung">Samsung</option>
+        <option value="tablet">Tablet</option>
+      </select>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section id="iphone" class="category">
+      <h2>iPhone</h2>
+      <div class="products">
+        <div
+          class="card"
+          data-name="iphone 17 pro max"
+          data-price="1199"
+          data-category="iphone"
+        >
+          <img src="./imgs/17 pro max.jpg" />
+          <h3>iPhone 17 Pro Max</h3>
+          <p>$1199</p>
+          <button onclick="addToCart('iPhone 17 Pro Max', 1199)">Add</button>
+        </div>
+
+        <div
+          class="card"
+          data-name="iphone 17 pro"
+          data-price="899"
+          data-category="iphone"
+        >
+          <img src="./imgs/17 pro.jpg" />
+          <h3>iPhone 17 Pro</h3>
+          <p>$899</p>
+          <button onclick="addToCart('iPhone 17 Pro', 899)">Add</button>
+        </div>
+
+        <div
+          class="card"
+          data-name="iphone 17"
+          data-price="799"
+          data-category="iphone"
+        >
+          <img src="./imgs/17.jpg" />
+          <h3>iPhone 17</h3>
+          <p>$799</p>
+          <button onclick="addToCart('iPhone 17', 799)">Add</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="samsung" class="category">
+      <h2>Samsung</h2>
+      <div class="products">
+        <div
+          class="card"
+          data-name="galaxy s26 ultra"
+          data-price="1399"
+          data-category="samsung"
+        >
+          <img src="./imgs/s26 ultra.png" />
+          <h3>Galaxy S26 Ultra</h3>
+          <p>$1,399</p>
+          <button onclick="addToCart('Galaxy S26 ultra', 1399)">Add</button>
+        </div>
+
+        <div
+          class="card"
+          data-name="galaxy s26 plus"
+          data-price="1099"
+          data-category="samsung"
+        >
+          <img src="./imgs/26 plus.jpg" />
+          <h3>Galaxy S26 Plus</h3>
+          <p>$1,099</p>
+          <button onclick="addToCart('Galaxy S26 plus', 1099)">Add</button>
+        </div>
+
+        <div
+          class="card"
+          data-name="galaxy s26"
+          data-price="899"
+          data-category="samsung"
+        >
+          <img src="./imgs/s26 n.jpg" />
+          <h3>Galaxy S26</h3>
+          <p>$899</p>
+          <button onclick="addToCart('Galaxy S26', 899)">Add</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="tablet" class="category">
+      <h2>Tablet</h2>
+      <div class="products">
+        <div
+          class="card"
+          data-name="ipad pro m5"
+          data-price="1279"
+          data-category="tablet"
+        >
+          <img src="./imgs/m5.jpg" />
+          <h3>iPad Pro M5</h3>
+          <p>$1279</p>
+          <button onclick="addToCart('iPad Pro M5', 1279)">Add</button>
+        </div>
+
+        <div
+          class="card"
+          data-name="ipad air m4"
+          data-price="989"
+          data-category="tablet"
+        >
+          <img src="./imgs/air.png" />
+          <h3>iPad Air M4</h3>
+          <p>$989</p>
+          <button onclick="addToCart('iPad Air M4', 989)">Add</button>
+        </div>
+
+        <div
+          class="card"
+          data-name="tab s11 ultra"
+          data-price="1399"
+          data-category="tablet"
+        >
+          <img src="./imgs/tab s11 ultra.jpg" />
+          <h3>Tab S11 Ultra</h3>
+          <p>$1,399</p>
+          <button onclick="addToCart('Tab S11 Ultra', 1399)">Add</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART -->
+    <div class="cart">
+      <h3>Cart</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total">0</span></p>
+
+      <button onclick="clearCart()">Remove All</button>
+    </div>
+
+    <footer>
+      <p>© 2026 RiRithShop</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
